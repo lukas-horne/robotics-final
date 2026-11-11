@@ -27,7 +27,7 @@ void setup() {
 }
 
 void loop() {
-  if (Bool == true && SD.begin(CSPin)) {
+  if (Bool == true && SD.begin(CSPin) == true) {
 
     // open the file for reading:
     myFile = SD.open("test.txt");
