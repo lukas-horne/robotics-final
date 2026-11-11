@@ -27,13 +27,14 @@ void setup() {
 }
 
 void loop() {
+  //successfull comunication to sd
   if (Bool == true && SD.begin(CSPin) == true) {
 
     // open the file for reading:
     myFile = SD.open("test.txt");
-
+    
+//checks if it opened successfully
     if (myFile) {
-      Serial.println("Starting file");
       // read from the file until there's nothing else in it:
       while (myFile.available()) {
         switch (myFile.read()) {
